@@ -72,15 +72,14 @@ afterEvaluate {
                 artifact sourcesJar
                 artifact javadocJar
 
-                // Set within Library Gradle
                 groupId PUBLISH_GROUP_ID
                 artifactId PUBLISH_ARTIFACT_ID
                 version PUBLISH_VERSION
 
                 pom {
                     name = PUBLISH_ARTIFACT_ID
-                    description = 'Fork of Barteksc AndroidPdfViewer - Android view for displaying PDFs rendered with PdfiumAndroid'
-                    url = 'https://github.com/mhiew/AndroidPdfViewer'
+                    description = 'Your library description'
+                    url = 'https://github.com/metehan-gokbel/AndroidPdfViewer'
                     licenses {
                         license {
                             name = 'The Apache License, Version 2.0'
@@ -89,23 +88,21 @@ afterEvaluate {
                     }
                     developers {
                         developer {
-                            id = 'min'
-                            name = 'Min Hiew'
+                            id = 'metehan'
+                            name = 'Metehan Gokbel'
                         }
                     }
                     scm {
-                        connection = 'scm:git:https://github.com/mhiew/AndroidPdfViewer'
-                        developerConnection = 'scm:git:ssh:github.com:mhiew/AndroidPdfViewer.git'
-                        url = 'https://github.com/mhiew/AndroidPdfViewer'
+                        connection = 'scm:git:https://github.com/metehan-gokbel/AndroidPdfViewer.git'
+                        developerConnection = 'scm:git:ssh:github.com:metehan-gokbel/AndroidPdfViewer.git'
+                        url = 'https://github.com/metehan-gokbel/AndroidPdfViewer'
                     }
                 }
             }
         }
-        // The repository to publish to, Sonatype/MavenCentral
+
         repositories {
             maven {
-                // This is an arbitrary name, you may also use "mavencentral" or
-                // any other name that's descriptive for you
                 name = "sonatype"
                 url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
                 credentials {
